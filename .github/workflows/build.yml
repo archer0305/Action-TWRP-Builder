@@ -82,6 +82,7 @@ jobs:
       run: |
         cd ${GITHUB_WORKSPACE}
         git clone -b android-12.1 https://github.com/archer0305/android_device_samsung_${{ matrix.target }}.git device/samsung/${{ matrix.target }} > /dev/null 2>&1
+        rm -rf device/samsung/${{ matrix.target }}/recovery/root/system/etc/init/android.hardware.health@2.0-service.rc
     
     - name: Setup ccache before build
       run: |
