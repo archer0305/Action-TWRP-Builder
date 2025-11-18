@@ -75,13 +75,13 @@ jobs:
       run: |
         cd ${GITHUB_WORKSPACE}
         repo sync -j$(nproc --all) > /dev/null 2>&1
-        mv -f images/* bootable/recovery/gui/theme/portrait_hdpi/images/
         mv -f DroidSansMono.ttf bootable/recovery/gui/theme/common/fonts/
-        mv -f portrait.xml bootable/recovery/gui/theme/common/
-        mv -f ui.xml bootable/recovery/gui/theme/portrait_hdpi/
         ls -al
       continue-on-error: true
-
+      # mv -f images/* bootable/recovery/gui/theme/portrait_hdpi/images/
+      # mv -f portrait.xml bootable/recovery/gui/theme/common/
+      # mv -f ui.xml bootable/recovery/gui/theme/portrait_hdpi/
+       
     - name: Clone device tree
       run: |
         cd ${GITHUB_WORKSPACE}
