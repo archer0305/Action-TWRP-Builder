@@ -93,7 +93,7 @@ jobs:
       id: twrp
       run: |
         cd ${GITHUB_WORKSPACE}  
-        ./build.sh ${{ matrix.target }} 1
+        ./build.sh ${{ matrix.target }} 3
       continue-on-error: true
 
     - name: Set variables
