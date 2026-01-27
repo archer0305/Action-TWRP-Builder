@@ -19,7 +19,7 @@ jobs:
     strategy:
       fail-fast: false      
       matrix:
-        target: [r0s, g0s, b0s, r0q, g0q, b0q, dm1q, dm2q, dm3q, e1s, e2s, e1q, e2q, e3q, b5q, q5q, b6q, q6q, q6aq, r11s, r12s, gts9, gts9p, gts9u, gts9wifi, gts9pwifi, gts9uwifi ]
+        target: [ dm3q ]
 
     steps:
     
@@ -86,8 +86,7 @@ jobs:
         
     - name: Clone common tree
       run: |
-        git clone -b android-12.1 https://github.com/Device-Tree-Archives/android_device_samsung_sm8450-common.git device/samsung/sm8450-common > /dev/null 2>&1
-        git clone -b android-12.1 https://github.com/Device-Tree-Archives/android_device_samsung_sm8550-common.git device/samsung/sm8550-common > /dev/null 2>&1
+        git clone -b test-arm64-only https://github.com/Device-Tree-Archives/android_device_samsung_sm8550-common.git device/samsung/sm8550-common > /dev/null 2>&1
     
     - name: Building recovery
       id: twrp
