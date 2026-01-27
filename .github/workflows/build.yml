@@ -86,6 +86,7 @@ jobs:
         
     - name: Clone common tree
       run: |
+        cd ${GITHUB_WORKSPACE}
         git clone -b test-arm64-only https://github.com/Device-Tree-Archives/android_device_samsung_sm8550-common.git device/samsung/sm8550-common > /dev/null 2>&1
     
     - name: Building recovery
