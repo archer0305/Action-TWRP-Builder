@@ -19,7 +19,7 @@ jobs:
     strategy:
       fail-fast: false      
       matrix:
-        target: [dm1q, dm2q, dm3q, b5q, q5q gts9, gts9p, gts9u, gts9wifi, gts9pwifi, gts9uwifi ]
+        target: [dm1q, dm2q, dm3q, b5q, q5q, gts9, gts9p, gts9u, gts9wifi, gts9pwifi, gts9uwifi ]
 
     steps:
     
